@@ -1,0 +1,42 @@
+html {
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.35;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  width: 50%;
+  margin: 0 auto;
+  background-color: lightgray;
+}
+
+h1 {
+  text-align: center;
+
+}
+
+.score {
+  color: tomato;
+  text-align: center;
+}
+
+table {
+  margin: auto;
+}
+
+td {
+  font-family: Baskerville, serif;
+  font-size: 75px;
+  text-align: center;
+  border: 3px solid black;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+}
