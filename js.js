@@ -12,10 +12,12 @@ $(document).on('ready',function () {
             $(my_cells[i]).css('color', 'tomato');
             $(my_cells[j]).css('color', 'tomato');
             $('td').off('click');
+            $('.game_over').fadeIn();
             break;
           }
           else if (turn === 9) {
             $('.score').text('DRAW');
+            $('.game_over').fadeIn();
           }
         }
       }
@@ -61,5 +63,12 @@ $(document).on('ready',function () {
     }
 
   });
+
+  $('.reset span').on('click', function () {
+    turn = 0;
+    $('td').empty();
+    $('.game_over').fadeOut();
+
+  })
 
 })

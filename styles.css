@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  width: 50%;
+  width: auto;
   margin: 0 auto;
   background-color: lightgray;
 }
@@ -22,9 +22,33 @@ h1 {
 
 }
 
+.game_over {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(184, 178, 178, 0.9);
+  margin: auto;
+  display: none;
+}
+
 .score {
   color: tomato;
   text-align: center;
+  margin: 30% auto 10%;
+}
+
+.reset {
+  width: 200px;
+  height: 60px;
+  background-color: tomato;
+  color: white;
+  text-align: center;
+  line-height: 58px;
+  border: 3px solid black;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: auto;
 }
 
 table {
