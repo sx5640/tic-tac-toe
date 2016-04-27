@@ -14,13 +14,14 @@ $(document).on('ready',function () {
             $('td').off('click');
             $('.game_over').fadeIn();
             break;
-          }
-          else if (turn === 9) {
-            $('.score').text('DRAW');
-            $('.game_over').fadeIn();
+            break;
           }
         }
       }
+    }
+    if (turn === 8 && $('.score').text() !== 'X WINS') {
+      $('.score').text('DRAW');
+      $('.game_over').fadeIn();
     }
   }
 
@@ -43,32 +44,62 @@ $(document).on('ready',function () {
     $(self).off('click');
   }
 
-
-  $('td').on('click', function () {
-    self = this;
-    $(this).text('X');
-    $(this).addClass('X');
-    $(this).off('click');
-    if (turn >= 4) {
-      judge('X');
-    }
-    turn++;
-
-    if ($('.score').text() !== 'X WINS') {
-      bot();
-      if (turn > 4) {
-        judge('O');
+  var vsBot = function () {
+    $('.game_on').fadeOut();
+    $('td').on('click', function () {
+      self = this;
+      $(this).text('X');
+      $(this).addClass('X');
+      $(this).off('click');
+      if (turn >= 4) {
+        judge('X');
       }
       turn++;
-    }
 
-  });
+      if ($('.score').text() !== 'X WINS') {
+        bot();
+        if (turn > 4) {
+          judge('O');
+        }
+        turn++;
+      }
 
-  $('.reset span').on('click', function () {
+    });
+  }
+
+  var vsHuman = function () {
+    $('.game_on').fadeOut();
+    $('td').on('click', function () {
+      self = this;
+      if (turn%2 === 0) {
+        $(this).text('X');
+        $(this).addClass('X');
+        $(this).off('click');
+      }
+      else {
+        $(this).text('O');
+        $(this).addClass('O');
+        $(this).off('click');
+      }
+      if (turn >= 4) {
+        judge($(this).attr('class'));
+      }
+      turn++;
+    })
+  }
+
+  var gameOver = function () {
     turn = 0;
     $('td').empty();
+    $('td').removeClass();
+    $('td').css('color','black');
+    $('.score').empty();
     $('.game_over').fadeOut();
-
-  })
+    $('.game_on').fadeIn();
+  }
+  $('.game_on').fadeIn();
+  $('#bot').on('click', vsBot);
+  $('#human').on('click', vsHuman);
+  $('.reset span').on('click', gameOver);
 
 })

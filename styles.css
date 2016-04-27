@@ -51,6 +51,51 @@ h1 {
   margin: auto;
 }
 
+.game_on {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(184, 178, 178, 0.9);
+  margin: auto;
+  display: none;
+}
+
+.welcome {
+  color: tomato;
+  text-align: center;
+  margin: 30% auto 10%;
+}
+
+.selector {
+  width: 450px;
+  margin: auto;
+  overflow: auto;
+}
+
+.buttons {
+  width: 200px;
+  height: 60px;
+  background-color: tomato;
+  color: white;
+  text-align: center;
+  line-height: 58px;
+  border: 3px solid black;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: auto;
+  display: inline-block;
+}
+
+#human{
+
+  float: left;
+}
+#bot{
+  display: inline-block;
+  float: right;
+}
+
 table {
   margin: auto;
 }
