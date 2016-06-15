@@ -1,0 +1,111 @@
+html {
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.35;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  width: auto;
+  margin: 0 auto;
+  background-color: lightgray;
+}
+
+h1 {
+  text-align: center;
+
+}
+
+.game_over {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(184, 178, 178, 0.9);
+  margin: auto;
+  display: none;
+}
+
+.score {
+  color: tomato;
+  text-align: center;
+  margin: 200px auto 65px;
+}
+
+.reset {
+  width: 200px;
+  height: 60px;
+  background-color: tomato;
+  color: white;
+  text-align: center;
+  line-height: 58px;
+  border: 3px solid black;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: auto;
+}
+
+.game_on {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(184, 178, 178, 0.9);
+  margin: auto;
+  display: none;
+}
+
+.welcome {
+  color: tomato;
+  text-align: center;
+  margin: 200px auto 65px;
+}
+
+.selector {
+  width: 450px;
+  margin: auto;
+  overflow: auto;
+}
+
+.buttons {
+  width: 200px;
+  height: 60px;
+  background-color: tomato;
+  color: white;
+  text-align: center;
+  line-height: 58px;
+  border: 3px solid black;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: auto;
+  display: inline-block;
+}
+
+#human{
+
+  float: left;
+}
+#bot{
+  display: inline-block;
+  float: right;
+}
+
+table {
+  margin: auto;
+}
+
+td {
+  font-family: Baskerville, serif;
+  font-size: 75px;
+  text-align: center;
+  border: 3px solid black;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+}
